@@ -1189,8 +1189,8 @@ function Frenkee() {
 function Heading() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
-      <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[48px] text-[#00A878] tracking-[-1.5px] w-full" style={{ fontWeight: 700 }}>
-        <p className="leading-none">Tvůj AI průvodce, který tě naučí rozumět vlastním financím!</p>
+      <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-2xl text-[#00A878] tracking-[-1.5px] w-full sm:text-3xl lg:text-[48px]" style={{ fontWeight: 700 }}>
+        <p className="leading-tight lg:leading-none">Tvůj AI průvodce, který tě naučí rozumět vlastním financím!</p>
       </div>
     </div>
   );
@@ -1240,7 +1240,7 @@ function Item() {
     <div className="relative shrink-0 w-full" data-name="Item">
       <div className="content-stretch flex flex-col items-start pl-[30px] relative w-full">
         <Image1 />
-        <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[24px] not-italic relative shrink-0 text-[#1A1A1A] text-[16px] tracking-[-0.2px] whitespace-nowrap">
+        <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[24px] not-italic relative shrink-0 text-[#1A1A1A] text-[16px] tracking-[-0.2px] whitespace-normal break-words">
           <p className="mb-0">Vysvětlí ti, jaké krytí nebo řešení dává smysl právě</p>
           <p>pro tebe</p>
         </div>
@@ -1293,7 +1293,7 @@ function Item1() {
     <div className="relative shrink-0 w-full" data-name="Item">
       <div className="content-stretch flex flex-col items-start pl-[30px] relative w-full">
         <Image3 />
-        <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#1A1A1A] text-[16px] tracking-[-0.2px] whitespace-nowrap">
+        <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#1A1A1A] text-[16px] tracking-[-0.2px] whitespace-normal break-words">
           <p className="leading-[24px]">Hlídá tvůj dlouhodobý finanční plán 24/7</p>
         </div>
       </div>
@@ -1345,7 +1345,7 @@ function Item2() {
     <div className="relative shrink-0 w-full" data-name="Item">
       <div className="content-stretch flex flex-col items-start pl-[30px] relative w-full">
         <Image5 />
-        <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#1A1A1A] text-[16px] tracking-[-0.2px] whitespace-nowrap">
+        <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#1A1A1A] text-[16px] tracking-[-0.2px] whitespace-normal break-words">
           <p className="leading-[24px]">Vše jasně, srozumitelně a bez nátlaku</p>
         </div>
       </div>
@@ -1387,7 +1387,7 @@ function Link() {
 
 function Container6() {
   return (
-    <div className="content-stretch flex flex-col h-[52px] items-start max-w-[306.24749755859375px] relative shrink-0 w-[177px]" data-name="Container">
+    <div className="content-stretch flex flex-col h-[52px] items-stretch relative shrink-0 w-full max-w-[320px] lg:max-w-[306.24749755859375px] lg:w-[177px]" data-name="Container">
       <Link />
     </div>
   );
@@ -1403,7 +1403,7 @@ function Container5() {
 
 function Container4() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start justify-center min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start justify-center min-h-0 min-w-0 relative" data-name="Container">
       <Frenkee />
       <Heading />
       <List />
@@ -1414,9 +1414,12 @@ function Container4() {
 
 function FrenkApp() {
   return (
-    <div className="absolute h-[808.58px] left-[44px] top-[-68px] w-[583.31px]" data-name="Frenk app">
+    <div
+      className="relative mx-auto h-[280px] w-full max-w-[min(100%,360px)] sm:h-[320px] sm:max-w-[400px] lg:absolute lg:left-[44px] lg:top-[-68px] lg:mx-0 lg:h-[808.58px] lg:w-[583.31px] lg:max-w-none"
+      data-name="Frenk app"
+    >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgFrenkApp} />
+        <img alt="" className="absolute left-0 top-0 size-full max-w-none object-contain object-center lg:object-cover" src={imgFrenkApp} />
       </div>
     </div>
   );
@@ -1424,7 +1427,7 @@ function FrenkApp() {
 
 function Container8() {
   return (
-    <div className="h-[433px] relative shrink-0 w-[519px]" data-name="Container">
+    <div className="relative h-[300px] w-full shrink-0 sm:h-[340px] lg:h-[433px] lg:w-[519px]" data-name="Container">
       <FrenkApp />
     </div>
   );
@@ -1432,7 +1435,7 @@ function Container8() {
 
 function Container3() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col items-stretch gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-0 relative shrink-0 w-full min-w-0" data-name="Container">
       <Container4 />
       <Container8 />
     </div>
@@ -1449,7 +1452,7 @@ function Container2() {
 
 function Container1() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col h-[487.35px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-[1_0_0] flex-col min-h-0 min-w-0 items-start relative lg:h-[487.35px]" data-name="Container">
       <Container2 />
     </div>
   );
@@ -1457,8 +1460,8 @@ function Container1() {
 
 function Background() {
   return (
-    <div className="max-w-[1200px] relative rounded-[10px] shrink-0 w-full" data-name="Background">
-      <div className="content-start flex flex-wrap items-start max-w-[inherit] py-[160px] relative w-full">
+    <div className="max-w-[1200px] relative rounded-[10px] shrink-0 w-full min-w-0 overflow-x-hidden" data-name="Background">
+      <div className="content-start flex flex-wrap items-start max-w-[inherit] py-16 relative w-full min-w-0 lg:py-[160px]">
         <Container1 />
       </div>
     </div>
@@ -1467,9 +1470,9 @@ function Background() {
 
 function HeadingContainer9() {
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start leading-[0] not-italic relative shrink-0 text-center w-[600px]" data-name="heading_container">
-      <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-[48px] text-[#00A878] tracking-[-1.5px] w-full" style={{ fontWeight: 700 }}>
-        <p className="leading-none">Co říkají naši klienti</p>
+    <div className="content-stretch flex flex-col gap-[8px] items-center lg:items-start leading-[0] not-italic relative shrink-0 text-center w-full max-w-[600px] mx-auto lg:mx-0" data-name="heading_container">
+      <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-3xl text-[#00A878] tracking-[-1.5px] w-full sm:text-4xl lg:text-[48px]" style={{ fontWeight: 700 }}>
+        <p className="leading-tight lg:leading-none">Co říkají naši klienti</p>
       </div>
       <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-[#1A1A1A] text-[18px] w-full">
         <p className="leading-[1.6]">Přečtěte si reálné recenze z Googlu</p>
