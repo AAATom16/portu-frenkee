@@ -21,4 +21,8 @@ export default defineConfig({
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
+
+  preview: {
+    allowedHosts: ['localhost', '127.0.0.1', '.up.railway.app', '.railway.app'],
+  },
 })
