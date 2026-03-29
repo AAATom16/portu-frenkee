@@ -1,9 +1,21 @@
+import type { Connect } from "vite";
 import type { Plugin } from "vite";
 import fs from "fs";
 import path from "path";
 
 const PREFIX = "figma:asset/";
 const VIRTUAL = "\0figma-asset:";
+
+/** Avoid partial-content (206) responses; some HTTP/2 proxies (e.g. Railway) error on range requests for static PNGs. */
+function stripRangeForFigmaAssets(): Connect.NextHandleFunction {
+  return (req, _res, next) => {
+    const url = req.url?.split("?")[0] ?? "";
+    if (url.startsWith("/figma-assets/")) {
+      delete req.headers.range;
+    }
+    next();
+  };
+}
 
 /**
  * Must use Vite's config.root — not import.meta.url in this file, because
@@ -17,6 +29,12 @@ export function figmaAssetsPlugin(): Plugin {
   return {
     name: "figma-assets",
     enforce: "pre",
+    configureServer(server) {
+      server.middlewares.use(stripRangeForFigmaAssets());
+    },
+    configurePreviewServer(server) {
+      server.middlewares.use(stripRangeForFigmaAssets());
+    },
     configResolved(config) {
       root = config.root;
       base = config.base;

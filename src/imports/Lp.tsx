@@ -9,6 +9,7 @@ import { FooterPortu } from "../app/components/FooterPortu";
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -342,6 +343,9 @@ function NavbarHeader() {
                 >
                   <SheetHeader>
                     <SheetTitle className="text-white">Nabídka</SheetTitle>
+                    <SheetDescription className="sr-only">
+                      Navigace na produkty pojištění, investice a kontakt.
+                    </SheetDescription>
                   </SheetHeader>
                   <div className="mt-4 flex flex-col gap-3 border-b border-white/10 pb-6">
                     <div className="bg-[#00A878] flex items-center justify-center rounded-lg px-4 py-3 shadow-sm">

@@ -5,6 +5,7 @@ import svgPaths from "../../imports/svg-3jpohhloqp";
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -212,6 +213,9 @@ function MobileNavSheet() {
       <SheetContent side="right" className="border-l border-white/10 bg-[#210949] text-white [&>button]:text-white">
         <SheetHeader>
           <SheetTitle className="text-white">Nabídka</SheetTitle>
+          <SheetDescription className="sr-only">
+            Navigace na produkty pojištění, investice a kontakt.
+          </SheetDescription>
         </SheetHeader>
         <div className="mt-4 flex flex-col gap-3 border-b border-white/10 pb-6">
           <div className="flex items-center justify-center rounded-lg bg-[#00A878] px-4 py-3 shadow-sm">
