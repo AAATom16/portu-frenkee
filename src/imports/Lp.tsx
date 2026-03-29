@@ -1888,7 +1888,7 @@ function BentoRow3() {
 
 function BentoGrid1() {
   return (
-    <div className="content-stretch flex flex-col gap-[18px] items-center relative shrink-0 w-full" data-name="bento_grid">
+    <div className="content-stretch relative flex w-full shrink-0 flex-col items-stretch gap-[18px]" data-name="bento_grid">
       <BentoRow2 />
       <BentoRow3 />
     </div>
@@ -1925,7 +1925,7 @@ function AssetContainer() {
 
 function HeadingContainer19() {
   return (
-    <div className="content-stretch flex flex-col gap-[4px] items-center leading-[0] not-italic relative shrink-0 text-[#1A1A1A] w-full" data-name="heading_container">
+    <div className="content-stretch relative flex w-full min-w-0 shrink-0 flex-col items-start gap-1 not-italic leading-normal text-[#1A1A1A]" data-name="heading_container">
       <div className="flex flex-col font-['Inter',sans-serif] font-bold justify-center relative shrink-0 text-[20px] w-full">
         <p className="leading-[1.6]">Cestovní pojištění do zahraničí online: Srovnání 2026</p>
       </div>
@@ -1938,7 +1938,7 @@ function HeadingContainer19() {
 
 function BlogItem() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[15px] items-center min-h-px min-w-px relative self-stretch" data-name="blog_item">
+    <div className="relative flex w-full min-w-0 shrink-0 flex-col items-stretch gap-4 self-stretch sm:gap-[15px] lg:min-h-0 lg:flex-[1_0_0]" data-name="blog_item">
       <AssetContainer />
       <HeadingContainer19 />
     </div>
@@ -1959,7 +1959,7 @@ function AssetContainer1() {
 
 function HeadingContainer20() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-center leading-[0] min-h-px min-w-px not-italic relative text-[#1A1A1A]" data-name="heading_container">
+    <div className="flex min-w-0 w-full flex-1 flex-col items-start gap-1 not-italic leading-normal text-[#1A1A1A]" data-name="heading_container">
       <div className="flex flex-col font-['Inter',sans-serif] font-bold justify-center relative shrink-0 text-[16px] w-full">
         <p className="leading-[1.6]">Co je pojištění odpovědnosti a co všechno nabízí</p>
       </div>
@@ -1972,7 +1972,7 @@ function HeadingContainer20() {
 
 function BlogItem1() {
   return (
-    <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-name="blog_item">
+    <div className="relative flex w-full min-w-0 shrink-0 flex-col gap-4 sm:flex-row sm:items-start sm:gap-6" data-name="blog_item">
       <AssetContainer1 />
       <HeadingContainer20 />
     </div>
@@ -1994,7 +1994,7 @@ function AssetContainer2() {
 
 function HeadingContainer21() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-center leading-[0] min-h-px min-w-px not-italic relative text-[#1A1A1A]" data-name="heading_container">
+    <div className="flex min-w-0 w-full flex-1 flex-col items-start gap-1 not-italic leading-normal text-[#1A1A1A]" data-name="heading_container">
       <div className="flex flex-col font-['Inter',sans-serif] font-bold justify-center relative shrink-0 text-[16px] w-full">
         <p className="leading-[1.6]">Jak danit hypotéku?</p>
       </div>
@@ -2007,7 +2007,7 @@ function HeadingContainer21() {
 
 function BlogItem2() {
   return (
-    <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-name="blog_item">
+    <div className="relative flex w-full min-w-0 shrink-0 flex-col gap-4 sm:flex-row sm:items-start sm:gap-6" data-name="blog_item">
       <AssetContainer2 />
       <HeadingContainer21 />
     </div>
@@ -2028,7 +2028,7 @@ function AssetContainer3() {
 
 function HeadingContainer22() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-center leading-[0] min-h-px min-w-px not-italic relative text-[#1A1A1A]" data-name="heading_container">
+    <div className="flex min-w-0 w-full flex-1 flex-col items-start gap-1 not-italic leading-normal text-[#1A1A1A]" data-name="heading_container">
       <div className="flex flex-col font-['Inter',sans-serif] font-bold justify-center relative shrink-0 text-[16px] w-full">
         <p className="leading-[1.6]">Srovnání pojištění pro cizince v roce 2026</p>
       </div>
@@ -2041,7 +2041,7 @@ function HeadingContainer22() {
 
 function BlogItem3() {
   return (
-    <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-name="blog_item">
+    <div className="relative flex w-full min-w-0 shrink-0 flex-col gap-4 sm:flex-row sm:items-start sm:gap-6" data-name="blog_item">
       <AssetContainer3 />
       <HeadingContainer22 />
     </div>
@@ -2063,7 +2063,7 @@ function AssetContainer4() {
 
 function HeadingContainer23() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-center leading-[0] min-h-px min-w-px not-italic relative text-[#1A1A1A]" data-name="heading_container">
+    <div className="flex min-w-0 w-full flex-1 flex-col items-start gap-1 not-italic leading-normal text-[#1A1A1A]" data-name="heading_container">
       <div className="flex flex-col font-['Inter',sans-serif] font-bold justify-center relative shrink-0 text-[16px] w-full">
         <p className="leading-[1.6]">Jak funguje pojistka na blbost?</p>
       </div>
@@ -2076,7 +2076,7 @@ function HeadingContainer23() {
 
 function BlogItem4() {
   return (
-    <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full" data-name="blog_item">
+    <div className="relative flex w-full min-w-0 shrink-0 flex-col gap-4 sm:flex-row sm:items-start sm:gap-6" data-name="blog_item">
       <AssetContainer4 />
       <HeadingContainer23 />
     </div>
@@ -2085,7 +2085,7 @@ function BlogItem4() {
 
 function Column() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] h-auto min-h-0 items-center min-w-0 w-full lg:h-[546px] relative" data-name="column">
+    <div className="relative flex w-full min-w-0 shrink-0 flex-col items-stretch gap-6 lg:h-[546px] lg:min-h-0 lg:flex-[1_0_0] lg:gap-[24px]" data-name="column">
       <BlogItem1 />
       <BlogItem2 />
       <BlogItem3 />
@@ -2096,7 +2096,7 @@ function Column() {
 
 function BlogContainer() {
   return (
-    <div className="content-stretch flex flex-col gap-8 lg:flex-row lg:gap-[24px] items-stretch lg:items-start justify-center min-w-0 relative w-full" data-name="blog_container">
+    <div className="relative flex w-full min-w-0 flex-col items-stretch gap-8 lg:flex-row lg:items-start lg:gap-[24px]" data-name="blog_container">
       <BlogItem />
       <Column />
     </div>
@@ -2105,7 +2105,7 @@ function BlogContainer() {
 
 function ContentContainer5() {
   return (
-    <div className="content-stretch flex flex-col gap-8 sm:gap-[48px] items-center max-w-[1200px] min-w-0 relative shrink-0 w-full" data-name="content_container">
+    <div className="content-stretch relative flex w-full max-w-[1200px] min-w-0 shrink-0 flex-col items-stretch gap-8 sm:gap-[48px]" data-name="content_container">
       <Frame14 />
       <BlogContainer />
     </div>
@@ -2114,7 +2114,7 @@ function ContentContainer5() {
 
 function ContentContainer4() {
   return (
-    <div className="content-stretch relative flex w-full max-w-[1200px] min-w-0 shrink-0 flex-col items-start gap-8 pb-24 pt-12 sm:gap-[48px] sm:pb-28 sm:pt-16 lg:py-[120px]" data-name="content_container">
+    <div className="content-stretch relative flex w-full max-w-[1200px] min-w-0 shrink-0 flex-col items-stretch gap-8 pb-32 pt-12 sm:gap-[48px] sm:pb-28 sm:pt-16 lg:items-start lg:py-[120px]" data-name="content_container">
       <HeadingContainer15 />
       <BentoGrid1 />
       <ContentContainer5 />
