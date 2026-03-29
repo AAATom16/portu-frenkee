@@ -2,7 +2,7 @@ import svgPaths from "../../imports/svg-c69enyrdrn";
 
 export function FooterPortu() {
   return (
-    <div className="bg-[#2D1B4E] content-stretch flex flex-col items-center overflow-clip relative w-full">
+    <div className="content-stretch relative flex w-full flex-col items-center overflow-clip bg-[#2D1B4E] pt-10 sm:pt-12">
       <div className="max-w-[1200px] w-full px-4 sm:px-6 md:px-[24px] py-10 md:py-[64px]">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-10 md:gap-16 items-start mb-10 md:mb-[48px]">

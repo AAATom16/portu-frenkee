@@ -1194,9 +1194,12 @@ function Frenkee() {
 
 function Heading() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
-      <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-2xl text-[#00A878] tracking-[-1.5px] w-full sm:text-3xl lg:text-[48px]" style={{ fontWeight: 700 }}>
-        <p className="leading-tight lg:leading-none">Tvůj AI průvodce, který tě naučí rozumět vlastním financím!</p>
+    <div className="content-stretch relative flex w-full min-w-0 shrink-0 flex-col items-start" data-name="Heading 2">
+      <div
+        className="flex w-full min-w-0 flex-col font-['Inter',sans-serif] justify-center not-italic text-2xl text-[#00A878] tracking-[-0.5px] sm:tracking-[-1.5px] sm:text-3xl lg:text-[48px] leading-tight lg:leading-none"
+        style={{ fontWeight: 700 }}
+      >
+        <p className="break-words">Tvůj AI průvodce, který tě naučí rozumět vlastním financím!</p>
       </div>
     </div>
   );
@@ -1233,24 +1236,15 @@ function ImageFill1() {
   );
 }
 
-function Image1() {
-  return (
-    <div className="absolute content-stretch flex flex-col items-start left-0 size-[20px] top-[4px]" data-name="Image">
-      <ImageFill1 />
-    </div>
-  );
-}
-
 function Item() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Item">
-      <div className="content-stretch flex flex-col items-start pl-[30px] relative w-full">
-        <Image1 />
-        <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[24px] not-italic relative shrink-0 text-[#1A1A1A] text-[16px] tracking-[-0.2px] whitespace-normal break-words">
-          <p className="mb-0">Vysvětlí ti, jaké krytí nebo řešení dává smysl právě</p>
-          <p>pro tebe</p>
-        </div>
+    <div className="relative flex w-full min-w-0 shrink-0 items-start gap-3" data-name="Item">
+      <div className="mt-0.5 shrink-0">
+        <ImageFill1 />
       </div>
+      <p className="min-w-0 flex-1 font-['Inter',sans-serif] text-[16px] font-normal leading-6 tracking-[-0.2px] text-[#1A1A1A]">
+        Vysvětlí ti, jaké krytí nebo řešení dává smysl právě pro tebe
+      </p>
     </div>
   );
 }
@@ -1286,23 +1280,15 @@ function ImageFill2() {
   );
 }
 
-function Image3() {
-  return (
-    <div className="absolute content-stretch flex flex-col items-start left-0 size-[20px] top-[4px]" data-name="Image">
-      <ImageFill2 />
-    </div>
-  );
-}
-
 function Item1() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Item">
-      <div className="content-stretch flex flex-col items-start pl-[30px] relative w-full">
-        <Image3 />
-        <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#1A1A1A] text-[16px] tracking-[-0.2px] whitespace-normal break-words">
-          <p className="leading-[24px]">Hlídá tvůj dlouhodobý finanční plán 24/7</p>
-        </div>
+    <div className="relative flex w-full min-w-0 shrink-0 items-start gap-3" data-name="Item">
+      <div className="mt-0.5 shrink-0">
+        <ImageFill2 />
       </div>
+      <p className="min-w-0 flex-1 font-['Inter',sans-serif] text-[16px] font-normal leading-6 tracking-[-0.2px] text-[#1A1A1A]">
+        Hlídá tvůj dlouhodobý finanční plán 24/7
+      </p>
     </div>
   );
 }
@@ -1338,23 +1324,15 @@ function ImageFill3() {
   );
 }
 
-function Image5() {
-  return (
-    <div className="absolute content-stretch flex flex-col items-start left-0 size-[20px] top-[4px]" data-name="Image">
-      <ImageFill3 />
-    </div>
-  );
-}
-
 function Item2() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Item">
-      <div className="content-stretch flex flex-col items-start pl-[30px] relative w-full">
-        <Image5 />
-        <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#1A1A1A] text-[16px] tracking-[-0.2px] whitespace-normal break-words">
-          <p className="leading-[24px]">Vše jasně, srozumitelně a bez nátlaku</p>
-        </div>
+    <div className="relative flex w-full min-w-0 shrink-0 items-start gap-3" data-name="Item">
+      <div className="mt-0.5 shrink-0">
+        <ImageFill3 />
       </div>
+      <p className="min-w-0 flex-1 font-['Inter',sans-serif] text-[16px] font-normal leading-6 tracking-[-0.2px] text-[#1A1A1A]">
+        Vše jasně, srozumitelně a bez nátlaku
+      </p>
     </div>
   );
 }
@@ -1409,7 +1387,7 @@ function Container5() {
 
 function Container4() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start justify-center min-h-0 min-w-0 relative" data-name="Container">
+    <div className="content-stretch relative flex w-full min-w-0 shrink-0 flex-col items-start justify-center gap-6 lg:min-h-0 lg:flex-[1_0_0] sm:gap-[24px]" data-name="Container">
       <Frenkee />
       <Heading />
       <List />
@@ -1433,7 +1411,7 @@ function FrenkApp() {
 
 function Container8() {
   return (
-    <div className="relative h-[300px] w-full shrink-0 sm:h-[340px] lg:h-[433px] lg:w-[519px]" data-name="Container">
+    <div className="relative mt-10 h-[280px] w-full shrink-0 sm:mt-12 sm:h-[320px] lg:mt-0 lg:h-[433px] lg:w-[519px]" data-name="Container">
       <FrenkApp />
     </div>
   );
@@ -1441,7 +1419,7 @@ function Container8() {
 
 function Container3() {
   return (
-    <div className="content-stretch flex flex-col items-stretch gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-0 relative shrink-0 w-full min-w-0" data-name="Container">
+    <div className="content-stretch relative flex w-full min-w-0 shrink-0 flex-col items-stretch gap-12 lg:flex-row lg:items-start lg:justify-between lg:gap-0" data-name="Container">
       <Container4 />
       <Container8 />
     </div>
@@ -1458,7 +1436,7 @@ function Container2() {
 
 function Container1() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col min-h-0 min-w-0 items-start relative lg:h-[487.35px]" data-name="Container">
+    <div className="content-stretch relative flex w-full min-w-0 shrink-0 flex-col items-start lg:h-[487.35px] lg:min-h-0 lg:flex-[1_0_0]" data-name="Container">
       <Container2 />
     </div>
   );
@@ -1466,7 +1444,7 @@ function Container1() {
 
 function Background() {
   return (
-    <div className="max-w-[1200px] relative rounded-[10px] shrink-0 w-full min-w-0 overflow-x-hidden" data-name="Background">
+    <div className="relative max-w-[1200px] w-full min-w-0 shrink-0 overflow-x-clip rounded-[10px]" data-name="Background">
       <div className="content-start flex flex-wrap items-start max-w-[inherit] py-16 relative w-full min-w-0 lg:py-[160px]">
         <Container1 />
       </div>
@@ -1915,12 +1893,12 @@ function BentoGrid1() {
 
 function Frame14() {
   return (
-    <div className="content-stretch flex min-w-0 flex-col gap-[12px] items-start leading-[0] not-italic relative shrink-0 w-full">
-      <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-3xl text-[#00A878] tracking-[-1.5px] w-full sm:text-4xl lg:text-[48px]" style={{ fontWeight: 700 }}>
+    <div className="content-stretch relative flex w-full min-w-0 shrink-0 flex-col items-start gap-3 not-italic leading-normal">
+      <div className="flex w-full min-w-0 flex-col font-['Inter',sans-serif] justify-center text-3xl text-[#00A878] tracking-[-0.5px] sm:tracking-[-1.5px] sm:text-4xl lg:text-[48px]" style={{ fontWeight: 700 }}>
         <p className="leading-tight lg:leading-none">Provedu vás úskalími pojistek, úvěrů a investic</p>
       </div>
-      <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-[#1A1A1A] text-[18px] text-justify w-full">
-        <p className="leading-[1.5]">Podívejte se, co píšou a říkají o Frenkeem média, a nahlédněte pod pokličku projektu s jeho CEO Jiřím Hluchým. Dozvíte se, jak vám Frenkee pomů��e pohodlně a online zařídit pojistky, hypotéku nebo chytře investovat.</p>
+      <div className="flex w-full min-w-0 flex-col font-['Inter',sans-serif] justify-center text-left text-[#1A1A1A] text-[18px] lg:text-justify">
+        <p className="leading-[1.5]">Podívejte se, co píšou a říkají o Frenkeem média, a nahlédněte pod pokličku projektu s jeho CEO Jiřím Hluchým. Dozvíte se, jak vám Frenkee pomůže pohodlně a online zařídit pojistky, hypotéku nebo chytře investovat.</p>
       </div>
     </div>
   );
@@ -2132,7 +2110,7 @@ function ContentContainer5() {
 
 function ContentContainer4() {
   return (
-    <div className="content-stretch flex flex-col gap-8 sm:gap-[48px] items-start max-w-[1200px] min-w-0 py-12 sm:py-16 lg:py-[120px] relative shrink-0 w-full" data-name="content_container">
+    <div className="content-stretch relative flex w-full max-w-[1200px] min-w-0 shrink-0 flex-col items-start gap-8 pb-24 pt-12 sm:gap-[48px] sm:pb-28 sm:pt-16 lg:py-[120px]" data-name="content_container">
       <HeadingContainer15 />
       <BentoGrid1 />
       <ContentContainer5 />
