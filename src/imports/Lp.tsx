@@ -908,7 +908,7 @@ function HeroSection() {
 
 function HeadingContainer8() {
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start leading-[0] not-italic relative shrink-0 w-full" data-name="heading_container">
+    <div className="content-stretch flex flex-col gap-[8px] items-start not-italic relative shrink-0 w-full leading-normal" data-name="heading_container">
       <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-3xl text-[#00A878] tracking-[-1.5px] w-full sm:text-4xl lg:text-[48px]" style={{ fontWeight: 700 }}>
         <p className="leading-none">Proč si vybrat nás?</p>
       </div>
@@ -924,7 +924,10 @@ function HeadingContainer8() {
 
 function ContentContainer2() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-0 min-w-0 pb-[48px] relative w-full" data-name="content_container">
+    <div
+      className="content-stretch relative flex w-full min-w-0 shrink-0 flex-col items-start pb-10 sm:pb-12 lg:min-h-0 lg:flex-[1_0_0] lg:pb-[48px]"
+      data-name="content_container"
+    >
       <HeadingContainer8 />
     </div>
   );
@@ -932,23 +935,21 @@ function ContentContainer2() {
 
 function VuesaxBoldCallSlash() {
   return (
-    <div className="absolute contents inset-0" data-name="vuesax/bold/call-slash">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 36">
-        <g id="call-slash">
-          <path d={svgPaths.p291f8b80} fill="var(--fill-0, #00A878)" id="Vector" />
-          <path d={svgPaths.p2eb700} fill="var(--fill-0, #00A878)" id="Vector_2" />
-          <path d={svgPaths.p32721800} fill="var(--fill-0, #00A878)" id="Vector_3" />
-          <g id="Vector_4" opacity="0" />
-        </g>
-      </svg>
-    </div>
+    <svg className="block size-full shrink-0" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36" data-name="vuesax/bold/call-slash">
+      <g id="call-slash">
+        <path d={svgPaths.p291f8b80} fill="var(--fill-0, #00A878)" id="Vector" />
+        <path d={svgPaths.p2eb700} fill="var(--fill-0, #00A878)" id="Vector_2" />
+        <path d={svgPaths.p32721800} fill="var(--fill-0, #00A878)" id="Vector_3" />
+        <g id="Vector_4" opacity="0" />
+      </g>
+    </svg>
   );
 }
 
 function IconContainer() {
   return (
-    <div className="content-stretch flex items-center p-[16px] relative rounded-[600px] shrink-0" data-name="icon_container">
-      <div className="relative shrink-0 size-[36px]" data-name="vuesax/bold/call-slash">
+    <div className="content-stretch flex shrink-0 items-center p-[16px] relative rounded-[600px]" data-name="icon_container">
+      <div className="relative size-[36px] shrink-0 overflow-hidden" data-name="vuesax/bold/call-slash">
         <VuesaxBoldCallSlash />
       </div>
     </div>
@@ -957,7 +958,7 @@ function IconContainer() {
 
 function SubheadingContainer() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[0] min-h-px min-w-px not-italic relative" data-name="subheading_container">
+    <div className="content-stretch relative flex min-h-0 min-w-0 flex-1 flex-col items-start justify-center gap-1 not-italic leading-normal" data-name="subheading_container">
       <div className="flex flex-col font-['Inter',sans-serif] font-medium justify-center relative shrink-0 w-full">
         <p className="font-['Inter',sans-serif] font-bold leading-[1.6] text-[18px] text-[#00A878]">
           Bez otravných telefonátů a nabídek
@@ -972,7 +973,7 @@ function SubheadingContainer() {
 
 function BulletPointContainer1() {
   return (
-    <div className="content-stretch flex gap-[12px] items-center relative shrink-0 w-full" data-name="bullet_point_container">
+    <div className="content-stretch relative flex w-full min-w-0 shrink-0 items-start gap-3" data-name="bullet_point_container">
       <IconContainer />
       <SubheadingContainer />
     </div>
@@ -981,30 +982,28 @@ function BulletPointContainer1() {
 
 function VuesaxBoldGlobalEdit() {
   return (
-    <div className="absolute contents inset-0" data-name="vuesax/bold/global-edit">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 36">
-        <g id="global-edit">
-          <path d="M0 36L36 36L36 0L0 0L0 36Z" fill="var(--fill-0, #00A878)" id="Vector" opacity="0" />
-          <path d={svgPaths.p2a47be80} fill="var(--fill-0, #00A878)" id="Vector_2" />
-          <path d={svgPaths.pa6000} fill="var(--fill-0, #00A878)" id="Vector_3" />
-          <path d={svgPaths.p15d60100} fill="var(--fill-0, #00A878)" id="Vector_4" />
-          <path d={svgPaths.p320d33c0} fill="var(--fill-0, #00A878)" id="Vector_5" />
-          <path d={svgPaths.pc925d00} fill="var(--fill-0, #00A878)" id="Vector_6" />
-          <path d={svgPaths.p3960ed80} fill="var(--fill-0, #00A878)" id="Vector_7" />
-          <path d={svgPaths.p3c715100} fill="var(--fill-0, #00A878)" id="Vector_8" />
-          <path d={svgPaths.p323c1e80} fill="var(--fill-0, #00A878)" id="Vector_9" />
-          <path d={svgPaths.p2ff8f0} fill="var(--fill-0, #00A878)" id="Vector_10" />
-          <path d={svgPaths.p1e196180} fill="var(--fill-0, #00A878)" id="Vector_11" />
-        </g>
-      </svg>
-    </div>
+    <svg className="block size-full shrink-0" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36" data-name="vuesax/bold/global-edit">
+      <g id="global-edit">
+        <path d="M0 36L36 36L36 0L0 0L0 36Z" fill="var(--fill-0, #00A878)" id="Vector" opacity="0" />
+        <path d={svgPaths.p2a47be80} fill="var(--fill-0, #00A878)" id="Vector_2" />
+        <path d={svgPaths.pa6000} fill="var(--fill-0, #00A878)" id="Vector_3" />
+        <path d={svgPaths.p15d60100} fill="var(--fill-0, #00A878)" id="Vector_4" />
+        <path d={svgPaths.p320d33c0} fill="var(--fill-0, #00A878)" id="Vector_5" />
+        <path d={svgPaths.pc925d00} fill="var(--fill-0, #00A878)" id="Vector_6" />
+        <path d={svgPaths.p3960ed80} fill="var(--fill-0, #00A878)" id="Vector_7" />
+        <path d={svgPaths.p3c715100} fill="var(--fill-0, #00A878)" id="Vector_8" />
+        <path d={svgPaths.p323c1e80} fill="var(--fill-0, #00A878)" id="Vector_9" />
+        <path d={svgPaths.p2ff8f0} fill="var(--fill-0, #00A878)" id="Vector_10" />
+        <path d={svgPaths.p1e196180} fill="var(--fill-0, #00A878)" id="Vector_11" />
+      </g>
+    </svg>
   );
 }
 
 function IconContainer1() {
   return (
-    <div className="content-stretch flex items-center p-[16px] relative rounded-[600px] shrink-0" data-name="icon_container">
-      <div className="relative shrink-0 size-[36px]" data-name="vuesax/bold/global-edit">
+    <div className="content-stretch flex shrink-0 items-center p-[16px] relative rounded-[600px]" data-name="icon_container">
+      <div className="relative size-[36px] shrink-0 overflow-hidden" data-name="vuesax/bold/global-edit">
         <VuesaxBoldGlobalEdit />
       </div>
     </div>
@@ -1013,7 +1012,7 @@ function IconContainer1() {
 
 function SubheadingContainer1() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[0] min-h-px min-w-px not-italic relative" data-name="subheading_container">
+    <div className="content-stretch relative flex min-h-0 min-w-0 flex-1 flex-col items-start justify-center gap-1 not-italic leading-normal" data-name="subheading_container">
       <div className="flex flex-col font-['Inter',sans-serif] font-medium justify-center relative shrink-0 w-full">
         <p className="font-['Inter',sans-serif] font-bold leading-[1.6] text-[18px] text-[#00A878]">
           100% Online a bez “papírování”
@@ -1028,7 +1027,7 @@ function SubheadingContainer1() {
 
 function BulletPointContainer2() {
   return (
-    <div className="content-stretch flex gap-[12px] items-center relative shrink-0 w-full" data-name="bullet_point_container">
+    <div className="content-stretch relative flex w-full min-w-0 shrink-0 items-start gap-3" data-name="bullet_point_container">
       <IconContainer1 />
       <SubheadingContainer1 />
     </div>
@@ -1037,22 +1036,20 @@ function BulletPointContainer2() {
 
 function VuesaxBoldLampOn() {
   return (
-    <div className="absolute contents inset-0" data-name="vuesax/bold/lamp-on">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 36">
-        <g id="lamp-on">
-          <path d={svgPaths.p19c27810} fill="var(--fill-0, #00A878)" id="Vector" />
-          <path d={svgPaths.p2e7b4900} fill="var(--fill-0, #00A878)" id="Vector_2" />
-          <g id="Vector_3" opacity="0" />
-        </g>
-      </svg>
-    </div>
+    <svg className="block size-full shrink-0" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36" data-name="vuesax/bold/lamp-on">
+      <g id="lamp-on">
+        <path d={svgPaths.p19c27810} fill="var(--fill-0, #00A878)" id="Vector" />
+        <path d={svgPaths.p2e7b4900} fill="var(--fill-0, #00A878)" id="Vector_2" />
+        <g id="Vector_3" opacity="0" />
+      </g>
+    </svg>
   );
 }
 
 function IconContainer2() {
   return (
-    <div className="content-stretch flex items-center p-[16px] relative rounded-[600px] shrink-0" data-name="icon_container">
-      <div className="relative shrink-0 size-[36px]" data-name="vuesax/bold/lamp-on">
+    <div className="content-stretch flex shrink-0 items-center p-[16px] relative rounded-[600px]" data-name="icon_container">
+      <div className="relative size-[36px] shrink-0 overflow-hidden" data-name="vuesax/bold/lamp-on">
         <VuesaxBoldLampOn />
       </div>
     </div>
@@ -1061,7 +1058,7 @@ function IconContainer2() {
 
 function SubheadingContainer2() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[0] min-h-px min-w-px not-italic relative" data-name="subheading_container">
+    <div className="content-stretch relative flex min-h-0 min-w-0 flex-1 flex-col items-start justify-center gap-1 not-italic leading-normal" data-name="subheading_container">
       <div className="flex flex-col font-['Inter',sans-serif] font-medium justify-center relative shrink-0 w-full">
         <p className="font-['Inter',sans-serif] font-bold leading-[1.6] text-[18px] text-[#00A878]">
           Tým expertů 20 roky zkušeností a AI Asistentem
@@ -1076,7 +1073,7 @@ function SubheadingContainer2() {
 
 function BulletPointContainer3() {
   return (
-    <div className="content-stretch flex gap-[12px] items-center relative shrink-0 w-full" data-name="bullet_point_container">
+    <div className="content-stretch relative flex w-full min-w-0 shrink-0 items-start gap-3" data-name="bullet_point_container">
       <IconContainer2 />
       <SubheadingContainer2 />
     </div>
@@ -1095,7 +1092,7 @@ function BulletPointContainer() {
 
 function ContentContainer1() {
   return (
-    <div className="content-stretch relative flex w-full max-w-[1200px] shrink-0 flex-col gap-10 px-4 pb-24 pt-2 sm:px-6 lg:flex-row lg:gap-[48px] lg:px-0 lg:pb-[200px] lg:pt-[10px]" data-name="content_container">
+    <div className="content-stretch relative flex w-full max-w-[1200px] shrink-0 flex-col items-stretch gap-10 px-0 pb-24 pt-2 sm:px-0 lg:flex-row lg:items-start lg:gap-[48px] lg:px-0 lg:pb-[200px] lg:pt-[10px]" data-name="content_container">
       <ContentContainer2 />
       <BulletPointContainer />
       <div className="absolute left-0 top-[184px] hidden h-[595px] w-[396.667px] lg:block" data-name="ChatGPT Image Jan 22, 2026, 03_18_37 PM 1">
