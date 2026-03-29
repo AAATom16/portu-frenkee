@@ -307,21 +307,30 @@ function NavbarHeader() {
     "rounded-lg px-3 py-3 font-['Inter',sans-serif] text-[15px] font-medium text-white/90 no-underline hover:bg-white/10";
 
   return (
-    <div className="sticky top-0 z-50 mx-auto flex w-full max-w-[1200px] flex-col items-start overflow-clip bg-[#210949] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.4)] relative rounded-none lg:rounded-[9px]">
+    <div className="sticky top-0 z-50 mx-auto flex w-full max-w-[1200px] flex-col items-start overflow-clip bg-[#210949] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.4)] relative rounded-none xl:rounded-[9px]">
       {/* Top Row */}
       <div className="relative h-[56px] w-full shrink-0">
         <div className="flex size-full flex-row items-center overflow-clip rounded-[inherit]">
-          <div className="relative flex size-full min-w-0 items-center justify-between gap-2 px-3 sm:px-6 lg:px-8">
+          <div className="relative flex size-full min-w-0 items-center justify-between gap-2 px-3 sm:px-6 xl:px-8">
             <Frame10 />
-            <div className="flex shrink-0 items-center gap-2 sm:gap-4">
-              <div className="hidden lg:flex">
+            <div className="flex min-w-0 shrink-0 items-center gap-1.5 sm:gap-3 xl:gap-4">
+              <div className="flex items-center gap-1.5 xl:hidden">
+                <div className="origin-right scale-[0.88]">
+                  <ButtonBase />
+                </div>
+                <Frame8 />
+                <span className="inline-flex shrink-0 text-white" aria-hidden>
+                  <LucideUser />
+                </span>
+              </div>
+              <div className="hidden xl:flex">
                 <Frame11 />
               </div>
               <Sheet>
                 <SheetTrigger asChild>
                   <button
                     type="button"
-                    className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/10 lg:hidden"
+                    className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/10 xl:hidden"
                     aria-label="Otevřít menu"
                   >
                     <Menu className="size-6" />
@@ -386,7 +395,7 @@ function NavbarHeader() {
       {/* Divider */}
       <div className="h-px w-full shrink-0 bg-white/5" />
       {/* Bottom Row — desktop */}
-      <div className="relative hidden h-[48px] w-full shrink-0 lg:block">
+      <div className="relative hidden h-[48px] w-full shrink-0 xl:block">
         <div className="flex size-full flex-row items-center justify-center overflow-clip rounded-[inherit]">
           <div className="relative flex size-full items-center justify-center px-8">
             <Frame9 />
@@ -480,7 +489,7 @@ function Container() {
 
 function Input() {
   return (
-    <div className="bg-white h-[48px] relative rounded-[10px] shrink-0 w-[343px]" data-name="Input">
+    <div className="bg-white h-[48px] relative rounded-[10px] shrink-0 w-full max-w-[343px] min-w-0" data-name="Input">
       <div className="content-stretch flex flex-col gap-[10px] items-start overflow-clip relative rounded-[inherit] size-full">
         <ImageFill />
         <Container />
@@ -494,10 +503,10 @@ function Frame12() {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0">
       <Input />
-      <RouterLink to="/auto/krok-1" className="no-underline w-full">
-        <div className="content-stretch flex gap-[8px] h-[48px] items-center justify-center overflow-clip px-[20px] py-[12px] relative rounded-[12px] shrink-0 cursor-pointer hover:opacity-90 transition-opacity bg-[#00A878]" data-name="primary">
-          <div className="flex flex-col font-['Inter',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">
-            <p className="leading-[1.6]">Chci povinné ručení + havarijní pojištění</p>
+      <RouterLink to="/auto/krok-1" className="no-underline w-full min-w-0">
+        <div className="content-stretch flex min-h-[48px] w-full items-center justify-center gap-[8px] overflow-hidden px-3 py-3 sm:px-[20px] sm:py-[12px] relative rounded-[12px] shrink-0 cursor-pointer hover:opacity-90 transition-opacity bg-[#00A878]" data-name="primary">
+          <div className="flex flex-col font-['Inter',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-center text-[14px] text-white sm:text-[16px] whitespace-normal sm:whitespace-nowrap">
+            <p className="leading-snug sm:leading-[1.6]">Chci povinné ručení + havarijní pojištění</p>
           </div>
         </div>
       </RouterLink>
@@ -543,7 +552,7 @@ function ButtonGhost() {
 
 function BentoCell1() {
   return (
-    <div className="bg-white/10 backdrop-blur-sm border border-white/20 content-stretch flex flex-col gap-[8px] h-[300px] items-start justify-end p-[24px] relative rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] shrink-0 w-[282px]" data-name="bento_cell">
+    <div className="bg-white/10 backdrop-blur-sm border border-white/20 content-stretch flex flex-col gap-[8px] h-[300px] items-start justify-end p-[24px] relative rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)] shrink-0 w-full max-w-[282px] min-w-0" data-name="bento_cell">
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none rounded-[12px]" />
       {/* Airplane image sticking out above the card */}
       <img
@@ -647,7 +656,7 @@ function Center() {
 
 function BottomLeft() {
   return (
-    <div className="content-stretch flex items-start justify-center relative shrink-0 w-[282px] overflow-visible" data-name="bottom_left">
+    <div className="content-stretch flex min-w-0 max-w-full items-start justify-center overflow-visible relative shrink-0 w-full sm:w-[282px]" data-name="bottom_left">
       <Center />
       {/* Firmy OSVČ floating image – protruding above the firmy card into the row gap */}
       <img
@@ -780,7 +789,7 @@ function BentoCell6() {
   return (
     <div className="bg-white/10 backdrop-blur-sm border border-white/20 flex-[1_0_0] h-[300px] min-h-px min-w-px relative rounded-[12px] shadow-[0px_4px_12px_0px_rgba(0,0,0,0.25)]" data-name="bento_cell">
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none rounded-[12px]" />
-      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
+      <div className="content-stretch flex flex-col items-start justify-between p-4 sm:p-[24px] relative size-full min-w-0">
         <div className="aspect-[307/202] relative shrink-0 w-full overflow-hidden" data-name="ChatGPT Image Jan 22, 2026, 02_24_38 PM 1">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <img alt="" className="absolute h-full left-0 max-w-none top-0 w-full object-cover" src={imgChatGptImageJan222026022438Pm1} />
@@ -882,13 +891,13 @@ function ContentContainer() {
 function HeroSection() {
   return (
     <div className="bg-[#2D1B4E] relative w-full overflow-x-hidden" data-name="hero_section">
-      <div className="flex w-full max-w-full flex-col items-center px-4 pb-12 pt-8 lg:hidden">
-        <div className="mb-8 w-full max-w-md">
+      <div className="flex w-full max-w-full min-w-0 flex-col items-center px-4 pb-12 pt-8 xl:hidden">
+        <div className="mb-8 w-full max-w-md min-w-0">
           <img src={imgHeroImage} alt="" className="h-auto w-full object-contain" />
         </div>
         <HeroSectionMobile />
       </div>
-      <div className="hidden size-full flex-col items-center lg:flex">
+      <div className="hidden size-full min-w-0 flex-col items-center xl:flex">
         <div className="content-stretch relative flex w-full min-w-0 flex-col items-center gap-[48px] px-[24px] pb-[80px] pt-[120px]">
           <ContentContainer />
         </div>
@@ -915,7 +924,7 @@ function HeadingContainer8() {
 
 function ContentContainer2() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px pb-[48px] relative" data-name="content_container">
+    <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-0 min-w-0 pb-[48px] relative w-full" data-name="content_container">
       <HeadingContainer8 />
     </div>
   );
@@ -1484,7 +1493,7 @@ function HeadingContainer9() {
 function TextContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="text_container">
-      <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[1.9] min-w-full not-italic relative shrink-0 text-[#1A1A1A] text-[16px] w-[min-content]">
+      <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[1.9] min-w-full not-italic relative shrink-0 text-[#1A1A1A] text-[16px] w-full min-w-0">
         <p className="mb-0">Naprostá spokojenost. Velmi rychlý a ochotný přístup. Od minulého roku jsem tu začal sjednávat všechny pojistky a vůbec neuvažuji o tom, že bych měl přejít někam jinam.</p>
         <p>&nbsp;</p>
       </div>
@@ -1520,7 +1529,7 @@ function Card() {
   return (
     <div className="bg-[rgba(246,238,247,0.5)] opacity-100 relative rounded-[16px] self-stretch shrink-0 w-full max-w-[389px]" data-name="card">
       <div aria-hidden="true" className="absolute border border-[#dcbadd] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_0.301px_0.51px_0px_rgba(0,0,0,0.06),0px_1.144px_2.72px_0px_rgba(0,0,0,0.02)]" />
-      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
+      <div className="content-stretch flex flex-col items-start justify-between p-4 sm:p-[24px] relative size-full min-w-0">
         <TextContainer />
         <AvatarContainer />
       </div>
@@ -1531,7 +1540,7 @@ function Card() {
 function TextContainer1() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="text_container">
-      <div className="flex flex-col font-['Inter',sans-serif] font-normal justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#1A1A1A] text-[16px] w-[min-content]">
+      <div className="flex flex-col font-['Inter',sans-serif] font-normal justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#1A1A1A] text-[16px] w-full min-w-0">
         <p className="leading-[1.9] whitespace-pre-wrap">{`Bezkonkurenční spokojenost všemi směry. Doporučuji! Až budu zase něco potřebovat,  vím na koho se mohu obrátit a kdo mi hlavně pomůže. Děkuji :)`}</p>
       </div>
     </div>
@@ -1566,7 +1575,7 @@ function Card1() {
   return (
     <div className="bg-[rgba(246,238,247,0.5)] opacity-100 relative rounded-[16px] self-stretch shrink-0 w-full max-w-[389px]" data-name="card">
       <div aria-hidden="true" className="absolute border border-[#dcbadd] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_0.301px_0.51px_0px_rgba(0,0,0,0.06),0px_1.144px_2.72px_0px_rgba(0,0,0,0.02)]" />
-      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
+      <div className="content-stretch flex flex-col items-start justify-between p-4 sm:p-[24px] relative size-full min-w-0">
         <TextContainer1 />
         <AvatarContainer1 />
       </div>
@@ -1576,8 +1585,8 @@ function Card1() {
 
 function TextContainer2() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-[341px]" data-name="text_container">
-      <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#1A1A1A] text-[16px] w-[min-content]">
+    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full min-w-0 max-w-[341px]" data-name="text_container">
+      <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#1A1A1A] text-[16px] w-full min-w-0">
         <p className="leading-[1.9]">Rád bych poděkoval týmu Frenkee za jejich vynikající pomoc a profesionalitu. Byli nejen ochotní, ale i velmi vstřícní a rychle reagovali na všechny mé potřeby. Určitě je doporučuji všem, kteří hledají spolehlivou a kvalitní pomoc. Jsou opravdu nejlepší v tom, co dělají. Děkuji vám</p>
       </div>
     </div>
@@ -1599,7 +1608,7 @@ function HeadingContainer12() {
 
 function AvatarContainer2() {
   return (
-    <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-[341px]" data-name="avatar_container">
+    <div className="content-stretch flex gap-[24px] items-center relative shrink-0 w-full min-w-0 max-w-[341px]" data-name="avatar_container">
       <div className="relative rounded-[1200px] shrink-0 size-[48px]" data-name="avatar">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[1200px] size-full" src={imgAvatar} />
       </div>
@@ -1612,7 +1621,7 @@ function Card2() {
   return (
     <div className="bg-[rgba(246,238,247,0.5)] opacity-100 relative rounded-[16px] self-stretch shrink-0 w-full max-w-[389px]" data-name="card">
       <div aria-hidden="true" className="absolute border border-[#dcbadd] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_0.301px_0.51px_0px_rgba(0,0,0,0.06),0px_1.144px_2.72px_0px_rgba(0,0,0,0.02)]" />
-      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
+      <div className="content-stretch flex flex-col items-start justify-between p-4 sm:p-[24px] relative size-full min-w-0">
         <TextContainer2 />
         <AvatarContainer2 />
       </div>
@@ -1623,7 +1632,7 @@ function Card2() {
 function TextContainer3() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="text_container">
-      <div className="flex flex-col font-['Inter',sans-serif] font-normal justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#1A1A1A] text-[16px] w-[min-content]">
+      <div className="flex flex-col font-['Inter',sans-serif] font-normal justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#1A1A1A] text-[16px] w-full min-w-0">
         <p className="leading-[1.9] whitespace-pre-wrap">{`Bezkonkurenční spokojenost všemi směry. Doporučuji! Až budu zase něco potřebovat,  vím na koho se mohu obrátit a kdo mi hlavně pomůže. Děkuji :)`}</p>
       </div>
     </div>
@@ -1658,7 +1667,7 @@ function Card3() {
   return (
     <div className="bg-[rgba(246,238,247,0.5)] opacity-100 relative rounded-[16px] self-stretch shrink-0 w-full max-w-[389px]" data-name="card">
       <div aria-hidden="true" className="absolute border border-[#dcbadd] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_0.301px_0.51px_0px_rgba(0,0,0,0.06),0px_1.144px_2.72px_0px_rgba(0,0,0,0.02)]" />
-      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
+      <div className="content-stretch flex flex-col items-start justify-between p-4 sm:p-[24px] relative size-full min-w-0">
         <TextContainer3 />
         <AvatarContainer3 />
       </div>
@@ -1669,7 +1678,7 @@ function Card3() {
 function TextContainer4() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="text_container">
-      <div className="flex flex-col font-['Inter',sans-serif] font-normal justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#1A1A1A] text-[16px] w-[min-content]">
+      <div className="flex flex-col font-['Inter',sans-serif] font-normal justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#1A1A1A] text-[16px] w-full min-w-0">
         <p className="leading-[1.9] whitespace-pre-wrap">{`Bezkonkurenční spokojenost všemi směry. Doporučuji! Až budu zase něco potřebovat,  vím na koho se mohu obrátit a kdo mi hlavně pomůže. Děkuji :)`}</p>
       </div>
     </div>
@@ -1704,7 +1713,7 @@ function Card4() {
   return (
     <div className="bg-[rgba(246,238,247,0.5)] opacity-100 relative rounded-[16px] self-stretch shrink-0 w-full max-w-[389px]" data-name="card">
       <div aria-hidden="true" className="absolute border border-[#dcbadd] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_0.301px_0.51px_0px_rgba(0,0,0,0.06),0px_1.144px_2.72px_0px_rgba(0,0,0,0.02)]" />
-      <div className="content-stretch flex flex-col items-start justify-between p-[24px] relative size-full">
+      <div className="content-stretch flex flex-col items-start justify-between p-4 sm:p-[24px] relative size-full min-w-0">
         <TextContainer4 />
         <AvatarContainer4 />
       </div>
@@ -1726,7 +1735,7 @@ function CardContainer() {
 
 function ContentContainer3() {
   return (
-    <div className="content-stretch flex flex-col gap-[48px] items-center max-w-[1200px] relative shrink-0 w-full" data-name="content_container">
+    <div className="content-stretch flex flex-col gap-8 sm:gap-[48px] items-center max-w-[1200px] min-w-0 relative shrink-0 w-full px-0" data-name="content_container">
       <HeadingContainer9 />
       <CardContainer />
     </div>
@@ -1735,9 +1744,9 @@ function ContentContainer3() {
 
 function HeadingContainer15() {
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start leading-[0] max-w-[600px] not-italic relative shrink-0 w-full" data-name="heading_container">
-      <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-[48px] text-[#00A878] tracking-[-1.5px] w-full" style={{ fontWeight: 700 }}>
-        <p className="leading-none">Frenkee v médiích</p>
+    <div className="content-stretch flex flex-col gap-[8px] items-start leading-[0] max-w-[600px] min-w-0 not-italic relative shrink-0 w-full" data-name="heading_container">
+      <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-3xl text-[#00A878] tracking-[-1.5px] w-full sm:text-4xl lg:text-[48px]" style={{ fontWeight: 700 }}>
+        <p className="leading-tight lg:leading-none">Frenkee v médiích</p>
       </div>
       <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-[#1A1A1A] text-[18px] text-justify w-full">
         <p className="leading-[1.5]">Podívejte se, co píšou a říkají o Frenkeem média, a nahlédněte pod pokličku projektu s jeho CEO Jiřím Hluchým. Dozvíte se, jak vám Frenkee pomůže pohodlně a online zařídit pojistky, hypotéku nebo chytře investovat.</p>
@@ -1795,13 +1804,13 @@ function MaskGroup() {
 
 function BentoCell8() {
   return (
-    <div className="content-stretch flex flex-col gap-[6px] h-[375px] items-start justify-end p-[18px] relative rounded-[6px] shadow-[0px_3px_6px_0px_rgba(0,0,0,0.15),0px_0.75px_2.25px_0px_rgba(0,0,0,0.3)] shrink-0 w-[348.75px]" data-name="bento_cell">
+    <div className="content-stretch flex flex-col gap-[6px] h-[375px] items-start justify-end p-[18px] relative rounded-[6px] shadow-[0px_3px_6px_0px_rgba(0,0,0,0.15),0px_0.75px_2.25px_0px_rgba(0,0,0,0.3)] shrink-0 w-full max-w-[348.75px] min-w-0" data-name="bento_cell">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[6px]">
         <img alt="" className="absolute max-w-none object-cover rounded-[6px] size-full" src={imgBentoCell1} />
         <div className="absolute bg-gradient-to-b from-1/2 from-[rgba(0,0,0,0)] inset-0 rounded-[6px] to-black" />
       </div>
       <MaskGroup />
-      <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[13.5px] text-white w-[min-content]">
+      <div className="flex flex-col font-['Inter',sans-serif] justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[13.5px] text-white w-full min-w-0">
         <p className="leading-[1.4]">V otázce investic zapomeňte na emoce a soustřeďte se na delší horizont, radí finanční specialista Jiří Hluchý</p>
       </div>
     </div>
@@ -1829,7 +1838,7 @@ function HeadingContainer17() {
 
 function BentoCell9() {
   return (
-    <div className="content-stretch flex flex-col gap-[6px] h-[375px] items-start justify-end p-[18px] relative rounded-[6px] shadow-[0px_3px_6px_0px_rgba(0,0,0,0.15),0px_0.75px_2.25px_0px_rgba(0,0,0,0.3)] shrink-0 w-[348.75px]" data-name="bento_cell">
+    <div className="content-stretch flex flex-col gap-[6px] h-[375px] items-start justify-end p-[18px] relative rounded-[6px] shadow-[0px_3px_6px_0px_rgba(0,0,0,0.15),0px_0.75px_2.25px_0px_rgba(0,0,0,0.3)] shrink-0 w-full max-w-[348.75px] min-w-0" data-name="bento_cell">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[6px]">
         <img alt="" className="absolute max-w-none object-cover rounded-[6px] size-full" src={imgBentoCell2} />
         <div className="absolute bg-gradient-to-b from-1/2 from-[rgba(0,0,0,0)] inset-0 rounded-[6px] to-black" />
@@ -1856,7 +1865,7 @@ function Layer() {
 
 function HospodarskeNovinyLogo() {
   return (
-    <div className="h-[41.794px] overflow-clip relative shrink-0 w-[423px]" data-name="Hospodářské-noviny-Logo 1">
+    <div className="h-[41.794px] max-w-full overflow-hidden relative shrink-0 w-full sm:max-w-[423px]" data-name="Hospodářské-noviny-Logo 1">
       <Layer />
     </div>
   );
@@ -1909,9 +1918,9 @@ function BentoGrid1() {
 
 function Frame14() {
   return (
-    <div className="content-stretch flex flex-col gap-[12px] items-start leading-[0] not-italic relative shrink-0 w-full">
-      <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-[48px] text-[#00A878] tracking-[-1.5px] w-full" style={{ fontWeight: 700 }}>
-        <p className="leading-none">Provedu vás úskalími pojistek, úvěrů a investic</p>
+    <div className="content-stretch flex min-w-0 flex-col gap-[12px] items-start leading-[0] not-italic relative shrink-0 w-full">
+      <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-3xl text-[#00A878] tracking-[-1.5px] w-full sm:text-4xl lg:text-[48px]" style={{ fontWeight: 700 }}>
+        <p className="leading-tight lg:leading-none">Provedu vás úskalími pojistek, úvěrů a investic</p>
       </div>
       <div className="flex flex-col font-['Inter',sans-serif] justify-center relative shrink-0 text-[#1A1A1A] text-[18px] text-justify w-full">
         <p className="leading-[1.5]">Podívejte se, co píšou a říkají o Frenkeem média, a nahlédněte pod pokličku projektu s jeho CEO Jiřím Hluchým. Dozvíte se, jak vám Frenkee pomů��e pohodlně a online zařídit pojistky, hypotéku nebo chytře investovat.</p>
@@ -1922,7 +1931,7 @@ function Frame14() {
 
 function AssetContainer() {
   return (
-    <div className="h-[484px] relative rounded-[12px] shrink-0 w-full" data-name="asset_container">
+    <div className="h-[220px] min-h-[200px] sm:h-[320px] lg:h-[484px] relative rounded-[12px] shrink-0 w-full min-w-0" data-name="asset_container">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[12px]">
         <div className="absolute bg-white inset-0 rounded-[12px]" />
         <img alt="" className="absolute max-w-none object-cover rounded-[12px] size-full" src={imgAssetContainer} />
@@ -2097,7 +2106,7 @@ function BlogItem4() {
 
 function Column() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] h-[546px] items-center min-h-px min-w-px relative" data-name="column">
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] h-auto min-h-0 items-center min-w-0 w-full lg:h-[546px] relative" data-name="column">
       <BlogItem1 />
       <BlogItem2 />
       <BlogItem3 />
@@ -2108,7 +2117,7 @@ function Column() {
 
 function BlogContainer() {
   return (
-    <div className="content-stretch flex gap-[24px] items-start justify-center relative size-full" data-name="blog_container">
+    <div className="content-stretch flex flex-col gap-8 lg:flex-row lg:gap-[24px] items-stretch lg:items-start justify-center min-w-0 relative w-full" data-name="blog_container">
       <BlogItem />
       <Column />
     </div>
@@ -2117,7 +2126,7 @@ function BlogContainer() {
 
 function ContentContainer5() {
   return (
-    <div className="content-stretch flex flex-col gap-[48px] items-center max-w-[1200px] relative shrink-0 w-full" data-name="content_container">
+    <div className="content-stretch flex flex-col gap-8 sm:gap-[48px] items-center max-w-[1200px] min-w-0 relative shrink-0 w-full" data-name="content_container">
       <Frame14 />
       <BlogContainer />
     </div>
@@ -2126,7 +2135,7 @@ function ContentContainer5() {
 
 function ContentContainer4() {
   return (
-    <div className="content-stretch flex flex-col gap-[48px] items-start max-w-[1200px] py-[120px] relative shrink-0 w-full" data-name="content_container">
+    <div className="content-stretch flex flex-col gap-8 sm:gap-[48px] items-start max-w-[1200px] min-w-0 py-12 sm:py-16 lg:py-[120px] relative shrink-0 w-full" data-name="content_container">
       <HeadingContainer15 />
       <BentoGrid1 />
       <ContentContainer5 />
@@ -2464,7 +2473,7 @@ function FooterNew() {
 
 export default function Lp() {
   return (
-    <div className="bg-[#F5F5F5] content-stretch flex flex-col gap-0 items-center p-0 relative w-full min-h-screen" data-name="LP">
+    <div className="bg-[#F5F5F5] content-stretch flex flex-col gap-0 items-center overflow-x-hidden p-0 relative w-full min-h-screen" data-name="LP">
       {/* Navbar – centered, same 1200px content width as footer */}
       <div className="w-full flex justify-center pt-[24px] bg-[#2D1B4E]">
         <NavbarHeader />
